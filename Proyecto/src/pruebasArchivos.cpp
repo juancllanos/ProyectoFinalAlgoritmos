@@ -16,7 +16,8 @@ using namespace std;
 
 int main(){
 
-	int con = 1;
+	int con = 3;
+
 	string word="";
 	vector<string>vector;
 
@@ -40,26 +41,37 @@ int main(){
         		int temp =0;
         		int ch=files.get();
         		cout<<"--------------->PALABRA: "<<char(ch)<<endl;
-        		if(char(ch)==char(10)){
-        			temp+=1;
-        			if(temp==con){
-        				while(char(ch)!=char(58)){
-        					word+=char(ch);
-        				}
-        				break;
-        			}
-        			break;
-        		}
+				while(temp!=con){
+					cout<<"CH: "<<char(ch)<<endl;
+					ch=files.get();
+					if(char(ch)==char(10)){
+						temp+=1;
+					}
+				}
+				int sh = files.get();
+				while(char(sh)!=char(10)){
+					word+=char(sh);
+					cout<<"---->SH: "<<char(sh)<<endl;
+					sh = files.get();
+					if(sh == EOF) break;
+				}
+				cout<<"NOMBRE: "<<word<<endl;
+				break;
         		//cout.put(ch);
         	}
+    		vector.push_back(word);
+    		word = "";
         	files.close();
         }
         file.close();
     }
+
+    for(int i=0; i<int(vector.size()); i++){
+    	cout<<"Parametro solicitado: "<<vector[i]<<endl;
+    }
+
     closedir(dir);
     return 0;
-
-    cout<<"PALABRA MUY IMPORTANTE: "<<word<<endl;
 }
 
 
