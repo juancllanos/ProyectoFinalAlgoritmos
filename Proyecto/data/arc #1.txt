@@ -1,3 +1,4 @@
 Persona #1:
-Nombre: Felipe
-Apellido: Guzmán
+Felipe
+Guzmán
+Azul

@@ -1,3 +1,4 @@
 Persona #2:
-Nombre: Juan Camilo
-Apellido: Llano
+Juan Camilo
+Llanos
+verde
