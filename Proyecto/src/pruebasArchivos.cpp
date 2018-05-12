@@ -11,12 +11,17 @@
 #include <fstream>
 #include <dirent.h>
 #include <vector>
+#include "Proyecto.h"
 
 using namespace std;
 
 int main(){
 
-	int con = 3;
+	vector<string>uno;
+	vector<string>dos;
+	vector<string>tres;
+
+	int con = 2;
 
 	string word="";
 	vector<string>vector;

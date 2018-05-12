@@ -3,31 +3,38 @@
 #define PROYECTO_H_
 
 #include <iostream>
-template <typename dataType>
+#include <string>
+#include <vector>
+
+
 class Aspirantes{
 public:
 
-	Aspirantes();
+	Aspirantes(std::string nombre, int trabajo,std::vector<std::string>parametros);
 
 	~Aspirantes();
 
-	void rellenar(dataType a, dataType b, dataType c, dataType d, dataType e);
+	void rellenar(int a, int b, int c, int d, int e);
 
-	dataType get1(dataType campo);
-	dataType get2(dataType campo);
-	dataType get3(dataType campo);
-	dataType get4(dataType campo);
-	dataType get5(dataType campo);
+	int get1(int campo);
+	int get2(int campo);
+	int get3(int campo);
+	int get4(int campo);
+	int get5(int campo);
+
 
 private:
-	dataType campo1;
-	dataType campo2;
-	dataType campo3;
-	dataType campo4;
-	dataType campo5;
+	std::string nombre;
+	int trabajo;
+
+	std::string campo1; //Titulo
+	std::string campo2; //años de experiencia
+	std::string campo3; //Años de estudio
+	std::string campo4; //Conocimiento en lenguajes
+	std::string campo5; //trabajo en equipo
 };
 
 
 
-
+#include "Proyectoh.cpp"
 #endif /* PROYECTO_H_ */
