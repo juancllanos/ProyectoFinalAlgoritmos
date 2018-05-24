@@ -5,9 +5,11 @@
  *      Author: User
  */
 
+
 #ifdef ARREGLO_H_
 
 #include <iostream>
+#include "heap.h"
 #include <vector>
 #include <list>
 #include <string>
@@ -23,11 +25,11 @@
 Trabajo::Trabajo(){
 	count = 0;
 	nBuckets = 5;
-	table = new std::list<std::string>[nBuckets];
-	std::fill(table,table+nBuckets,std::list<std::string>());
+	table = new Heap[nBuckets];
+	std::fill(table,table+nBuckets,Heap());
 }
 
-std::vector<Aspirante> Trabajo::clasificacionTrabajo(std::vector<std::vector<std::string>>vector, int num){
+std::vector<Aspirante> Trabajo::clasificacionTrabajo(std::vector<std::vector<std::string> > vector, int num){
 	std::vector<Aspirante> vector1;
 	std::vector<Aspirante> vector2;
 	std::vector<Aspirante> vector3;
@@ -120,6 +122,7 @@ void Trabajo::print(){
 	}
 }*/
 
+/*
 std::vector<std::string> Trabajo::getInformation(int persona){
 	int cantidad = listFile();
 	std::vector<std::vector<std::string>>vectorF;
@@ -162,7 +165,7 @@ std::vector<std::string> Trabajo::getInformation(int persona){
 					while(char(sh)!=char(10)){
 						word+=char(sh);
 						sh = files.get();
-						if(sh == EOF) break;
+						if(sh == std::EOF) break;
 					}
 					break;
 				}
@@ -192,7 +195,7 @@ int Trabajo::listFile(){
 			closedir(pDIR);
 	}
 	return cantidad-2;
-}
+}*/
 
 #endif
 

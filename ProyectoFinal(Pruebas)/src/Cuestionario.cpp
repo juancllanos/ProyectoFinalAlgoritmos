@@ -23,9 +23,9 @@ int main(){
 	vector<string>Cuestiones;
 
 	cout<<"BIENVENIDO"<<endl;
-	cout<<"->¿Cúal de los suiguientes trabajos quiere analizar?"<<endl;
+	cout<<"->ï¿½Cï¿½al de los suiguientes trabajos quiere analizar?"<<endl;
 	cout<<"1) Desarrollador \n2) Administrador \n3) Analista"<<endl;
-	cout<<"Escriba un número (1,2,3): "<<endl;
+	cout<<"Escriba un nï¿½mero (1,2,3): "<<endl;
 	cin>>trabajo;
 	cout<<"-------------------------------------------------"<<endl;
 	cout<<""<<endl;
@@ -35,7 +35,7 @@ int main(){
 		while(true){
 			bool funciona = false;
 			cout<<"Trabajo a analisar es: Desarrollador"<<endl;
-			cout<<"1) Años de estudio \n2) Años de experiencia \n3) Titulo \n4) Trabajo en equipo \n5) Algo"<<endl;
+			cout<<"1) Aï¿½os de estudio \n2) Aï¿½os de experiencia \n3) Titulo \n4) Trabajo en equipo \n5) Algo"<<endl;
 			cout<<"Ingrese de menor a mayor las caracteristicas que le parecen mas importantes"<<endl;
 			string palabra;
 			cin.ignore();
@@ -86,4 +86,5 @@ bool repeticion(vector<int>vector,int num){
 	}
 	return value;
 }
+
 

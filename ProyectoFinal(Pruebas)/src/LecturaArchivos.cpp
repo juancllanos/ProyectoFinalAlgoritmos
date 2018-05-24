@@ -4,7 +4,7 @@
  *  Created on: 18/05/2018
  *      Author: User
  */
-
+/*
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
@@ -14,8 +14,8 @@
 
 using namespace std;
 
-int listFileTemp();
-
+int listFileTemp();*/
+/*
 int main_sinuso(){
 
 	vector<string>dos;
@@ -23,7 +23,7 @@ int main_sinuso(){
 	vector<string>cuatro;
 
 	int cantidad = listFileTemp();
-	vector<vector<string>>vectorF;
+	vector<vector<string>>(vectorF);
 	for(int y=0; y<cantidad; y++){
 		vector<string>vector;
 		vectorF.push_back(vector);
@@ -123,4 +123,4 @@ int listFileTemp(){
 	return cantidad-2;
 }
 
-
+*/

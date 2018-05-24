@@ -1,4 +1,4 @@
-/*
+                                                    /*
  * arreglo.h
  *
  *  Created on: 18/05/2018
@@ -12,12 +12,13 @@
 #include <list>
 #include <vector>
 #include <string>
+#include "heap.h"
 #include "Aspirante.h"
 
 class Trabajo{
     std::size_t count;
     std::size_t nBuckets;
-    std::list<std::string> *table;
+    Heap *table;
 /*	struct Work{
 		std::string name;
 		int workP;
@@ -40,7 +41,7 @@ public:
 
     int listFile();
     std::vector<std::string> getInformation(int persona);
-    std::vector<Aspirante> clasificacionTrabajo(std::vector<std::vector<std::string>> vector, int num);
+    std::vector<Aspirante> clasificacionTrabajo(std::vector<std::vector<std::string> > vector, int num);
     void Importancia(int I1,int I2, int I3, int I4, int I5);
 };
 

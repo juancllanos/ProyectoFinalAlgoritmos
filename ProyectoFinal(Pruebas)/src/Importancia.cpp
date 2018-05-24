@@ -5,7 +5,7 @@
  *      Author: User
  */
 
-
+/*
 #include <iostream>
 #include <vector>
 #include "Aspirante.h"
@@ -31,3 +31,4 @@ void Importancia(vector<int>OrdenImportancia,vector<Aspirante> Aspirantes){
 int repeticion(vector<int>vector){
 	int contador = 0;
 }
+*/
