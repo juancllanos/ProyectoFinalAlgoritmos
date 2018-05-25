@@ -1,7 +1,8 @@
 Persona #4:
 Pedro Monterrey
 1
-100
-pera
-plato
-tenedor
+16
+17
+18
+19
+20

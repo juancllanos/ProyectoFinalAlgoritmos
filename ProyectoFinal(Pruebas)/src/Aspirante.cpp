@@ -12,6 +12,40 @@
 #include <string>
 #include "Aspirante.h"
 
+Aspirante::Aspirante(){
+	std::string vector;
+
+	nombre="";
+	trabajo=0;
+	puntaje=0;
+
+	pregunta1 = vector[0];
+	pregunta2 = vector[1];
+	pregunta3 = vector[2];
+	pregunta4 = vector[3];
+	pregunta5 = vector[4];
+
+	std::stringstream PuntajeP1(pregunta1);
+	Pre1 = 0;
+	PuntajeP1 >> Pre1;
+
+	std::stringstream PuntajeP2(pregunta2);
+	Pre2 = 0;
+	PuntajeP2 >> Pre2;
+
+	std::stringstream PuntajeP3(pregunta3);
+	Pre3 = 0;
+	PuntajeP3 >> Pre3;
+
+	std::stringstream PuntajeP4(pregunta4);
+	Pre4 = 0;
+	PuntajeP4 >> Pre4;
+
+	std::stringstream PuntajeP5(pregunta5);
+	Pre5 = 0;
+	PuntajeP5 >> Pre5;
+}
+
 Aspirante::Aspirante(std::vector<std::string>vector){
 	std::string trabajoF = vector[1];
 
@@ -23,11 +57,31 @@ Aspirante::Aspirante(std::vector<std::string>vector){
 	trabajo = tra;
 	puntaje = 0;
 
-	pregunta1 = vector[3];
-	pregunta2 = vector[4];
-	pregunta3 = vector[5];
-	pregunta4 = vector[6];
-	pregunta5 = vector[7];
+	pregunta1 = vector[2];
+	pregunta2 = vector[3];
+	pregunta3 = vector[4];
+	pregunta4 = vector[5];
+	pregunta5 = vector[6];
+
+	std::stringstream PuntajeP1(pregunta1);
+	Pre1 = 0;
+	PuntajeP1 >> Pre1;
+
+	std::stringstream PuntajeP2(pregunta2);
+	Pre2 = 0;
+	PuntajeP2 >> Pre2;
+
+	std::stringstream PuntajeP3(pregunta3);
+	Pre3 = 0;
+	PuntajeP3 >> Pre3;
+
+	std::stringstream PuntajeP4(pregunta4);
+	Pre4 = 0;
+	PuntajeP4 >> Pre4;
+
+	std::stringstream PuntajeP5(pregunta5);
+	Pre5 = 0;
+	PuntajeP5 >> Pre5;
 }
 
 
@@ -47,25 +101,25 @@ int Aspirante::getTrabajo(){
 	return trabajo;
 }
 
-std::string Aspirante::getPregunta(int num){
+int Aspirante::getPregunta(int num){
 	switch(num){
 	case 1:
-		return pregunta1;
+		return Pre1;
 		break;
 	case 2:
-		return pregunta2;
+		return Pre2;
 		break;
 	case 3:
-		return pregunta3;
+		return Pre3;
 		break;
 	case 4:
-		return pregunta4;
+		return Pre4;
 		break;
 	case 5:
-		return pregunta5;
+		return Pre5;
 		break;
 	default:
-		return "Error";
+		return 0;
 	}
 }
 

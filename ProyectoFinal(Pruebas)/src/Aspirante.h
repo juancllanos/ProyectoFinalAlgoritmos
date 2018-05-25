@@ -23,12 +23,19 @@ private:
 	std::string pregunta4;
 	std::string pregunta5;
 
+	int Pre1;
+	int Pre2;
+	int Pre3;
+	int Pre4;
+	int Pre5;
+
 public:
+	Aspirante();
 	Aspirante(std::vector<std::string>vector);
 
 	std::string getNombre();
 	int getPuntaje();
-	std::string getPregunta(int num);
+	int getPregunta(int num);
 	void setPuntaje(int puntaje);
 	int getTrabajo();
 };

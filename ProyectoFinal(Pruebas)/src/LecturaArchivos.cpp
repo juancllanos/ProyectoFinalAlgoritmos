@@ -4,7 +4,7 @@
  *  Created on: 18/05/2018
  *      Author: User
  */
-/*
+
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
@@ -14,24 +14,36 @@
 
 using namespace std;
 
-int listFileTemp();*/
-/*
-int main_sinuso(){
+int listFileTemp();
 
+int main_LECTURA(){
+	//listFileTemp();
+
+
+	vector<string>uno;
 	vector<string>dos;
 	vector<string>tres;
 	vector<string>cuatro;
+	vector<string>cinco;
+	vector<string>seis;
 
 	int cantidad = listFileTemp();
-	vector<vector<string>>(vectorF);
-	for(int y=0; y<cantidad; y++){
+	vector<vector<string> >vectorF;
+	/*for(int y=0; y<cantidad; y++){
 		vector<string>vector;
 		vectorF.push_back(vector);
-	}
+	}*/
+	vectorF.push_back(uno);
+	vectorF.push_back(dos);
+	vectorF.push_back(tres);
+	vectorF.push_back(cuatro);
+	vectorF.push_back(cinco);
+	vectorF.push_back(seis);
 	cout<<"ANTES DEL TRABAJO"<<endl;
 	cout<<vectorF.size()<<endl;
 	int con = 1;
 	int s=0;
+	int comienzo = 3;
 
 
 	while(con!=6){
@@ -56,7 +68,7 @@ int main_sinuso(){
 			cout<<"Filename: "<<filename<<endl;
 			ifstream file(filename);
 			ifstream files(filename);
-			if (file.is_open()){
+			if (file.is_open() && comienzo==2){
 				while(true){
 					int temp =0;
 					int ch=files.get();
@@ -84,8 +96,9 @@ int main_sinuso(){
 				cout<<vectorF[s].size()<<endl;
 				word = "";
 				s+=1;
-				files.close();
+				//files.close();
 			}
+			comienzo+=1;
 			file.close();
 		}
 		s=0;
@@ -114,13 +127,12 @@ int listFileTemp(){
 	struct dirent *entry;
 	if( (pDIR=opendir("data")) ){
 			while( (entry = readdir(pDIR)) ){
-					if( strcmp(entry->d_name, ".") != 0 && strcmp(entry->d_name, "..") != 0 )
-					cout << entry->d_name << "\n";
-					cantidad+=1;
+				if( strcmp(entry->d_name, ".") != 0 && strcmp(entry->d_name, "..") != 0 )
+				cout << entry->d_name << "\n";
+				cantidad+=1;
 			}
 			closedir(pDIR);
 	}
 	return cantidad-2;
 }
 
-*/

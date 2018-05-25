@@ -1,7 +1,8 @@
 Persona #1:
-Felipe Guzmán
+Felipe Guzman
 1
-89
-pizza
-gorra
-camisa
+1
+2
+3
+4
+5

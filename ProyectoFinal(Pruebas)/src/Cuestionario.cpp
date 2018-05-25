@@ -14,7 +14,7 @@ using namespace std;
 
 
 bool repeticion(vector<int>vector,int num);
-
+/*
 int main(){
 
 	int trabajo = 0;
@@ -23,9 +23,9 @@ int main(){
 	vector<string>Cuestiones;
 
 	cout<<"BIENVENIDO"<<endl;
-	cout<<"->�C�al de los suiguientes trabajos quiere analizar?"<<endl;
+	cout<<"->Cual de los suiguientes trabajos quiere analizar?"<<endl;
 	cout<<"1) Desarrollador \n2) Administrador \n3) Analista"<<endl;
-	cout<<"Escriba un n�mero (1,2,3): "<<endl;
+	cout<<"Escriba un numero (1,2,3): "<<endl;
 	cin>>trabajo;
 	cout<<"-------------------------------------------------"<<endl;
 	cout<<""<<endl;
@@ -35,7 +35,7 @@ int main(){
 		while(true){
 			bool funciona = false;
 			cout<<"Trabajo a analisar es: Desarrollador"<<endl;
-			cout<<"1) A�os de estudio \n2) A�os de experiencia \n3) Titulo \n4) Trabajo en equipo \n5) Algo"<<endl;
+			cout<<"1) Anos de estudio \n2) Anos de experiencia \n3) Titulo \n4) Trabajo en equipo \n5) Algo"<<endl;
 			cout<<"Ingrese de menor a mayor las caracteristicas que le parecen mas importantes"<<endl;
 			string palabra;
 			cin.ignore();
@@ -88,3 +88,4 @@ bool repeticion(vector<int>vector,int num){
 }
 
 
+*/
