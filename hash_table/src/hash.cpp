@@ -3,64 +3,36 @@
 
 template <typename dataType>
 hashTable<dataType>::hashTable() {
-    std::cout << "Constructor for hash table" << std::endl;
     count = 0;
     nBuckets = 5;
     table = new std::vector<Aspirante>[nBuckets];
     std::fill(table, table + nBuckets, std::vector<Aspirante>());
-    
-    std::cout << nBuckets << " " << count << std::endl;
+
 }
 
 template<typename dataType>
 void hashTable<dataType>::insert(Aspirante & data, int numero){
-	//bool ingresado = find(data,numero);
-	switch(numero){
-	case 1:
-		table[numero-1].push_back(data);
-		orden(table[numero-1],numero);
-		break;
-	case 2:
-		table[numero-1].push_back(data);
-		orden(table[numero-1],numero);
-		break;
-	case 3:
-		table[numero-1].push_back(data);
-		orden(table[numero-1],numero);
-		break;
-	case 4:
-		table[numero-1].push_back(data);
-		orden(table[numero-1],numero);
-		break;
-	case 5:
-		table[numero-1].push_back(data);
-		orden(table[numero-1],numero);
-		break;
-	}
-	count++;
+	table[numero-1].push_back(data);
+	//orden(table[numero-1],numero,0);
 }
-
+/*
 template <typename dataType>
-void hashTable<dataType>::orden(std::vector<Aspirante> &listaA, int num){
-	bool y = true;
+std::vector<Aspirante> hashTable<dataType>::orden(int num){
 	int i=0;
-	Aspirante mayor;
-	mayor = listaA[0];
-	while(i!=int(listaA.size())){
-		if(mayor.getPregunta(num) < listaA[i+1].getPregunta(num)){
-			Aspirante temp = mayor;
-			mayor = listaA[i+1];
-			listaA[i+1] = temp;
-			y = false;
+	Aspirante mayor = table[num-1][i];
+	while(i<int(table[num-1].size())){
+		std:cout<<int(table[num-1].size())<<std::endl;
+		std::cout<<table[num-1][i].getPregunta(num)<<std::endl;
+		std::cout<<table[num-1][i-1].getPregunta(num)<<std::endl;
+		if(table[num-1][i].getPregunta(num)>table[num-1][i-1].getPregunta(num)){
+			Aspirante temp = table[num][i];
+			table[num][i] = mayor;
+			mayor = temp;
 		}
-		i++;
+		i+=2;
 	}
-	if (y == true){
-		return;
-	}else{
-		orden(listaA,num);
-	}
-}
+	return table[num-1];
+}*/
 
 template<typename dataType>
 bool hashTable<dataType>::find(Aspirante data, int numero){
@@ -82,11 +54,14 @@ void hashTable<dataType>::print(){
 	std::cout<<"Prueba"<<std::endl;
 	for(int i=0; i<5; i++){
 		std::cout<<"------------------------"<<std::endl;
-		for(int j=0; j<3; j++){
-			std::cout<<table[i][j].getPregunta(i+1)<<std::endl;
+		if(i!=3){
+			std::cout<<"-------Campo "<<i+1<<"-------"<<std::endl;
+		}
+		for(int j=0; j<5; j++){
+			std::cout<<table[i][j].getNombre()<<": "<<table[i][j].getPregunta(i+1)<<std::endl;
 		}
 	}
 }
 
 
-#endif /* hash_hpp */	std::list<dataType> lista;
+#endif /* hash_hpp */	//std::list<dataType> lista;

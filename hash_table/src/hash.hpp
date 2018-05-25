@@ -24,7 +24,7 @@ public:
     
     bool find(Aspirante data, int numero);
     void insert(Aspirante & data, int numero);
-    void orden(std::vector<Aspirante> &listaA, int num);
+    std::vector<Aspirante> orden(int num);
     void print();
 };
 
